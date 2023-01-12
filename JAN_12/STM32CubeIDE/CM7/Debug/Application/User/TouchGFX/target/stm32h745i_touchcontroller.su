@@ -1,0 +1,2 @@
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/stm32h745i_touchcontroller.cpp:11:6:void STM32H745ITouchController::init()	24	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/stm32h745i_touchcontroller.cpp:37:6:bool STM32H745ITouchController::sampleTouch(int32_t&, int32_t&)	16	static

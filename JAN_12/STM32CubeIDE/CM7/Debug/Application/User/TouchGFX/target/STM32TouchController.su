@@ -1,0 +1,6 @@
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp:30:13:touchgfx::TouchController::~TouchController()	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp:30:13:virtual touchgfx::TouchController::~TouchController()	16	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/STM32TouchController.cpp:26:6:virtual void STM32TouchController::init()	16	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/STM32TouchController.cpp:35:6:virtual bool STM32TouchController::sampleTouch(int32_t&, int32_t&)	24	static
+../../../CM7/TouchGFX/target/STM32TouchController.hpp:36:7:STM32TouchController::~STM32TouchController()	16	static
+../../../CM7/TouchGFX/target/STM32TouchController.hpp:36:7:virtual STM32TouchController::~STM32TouchController()	16	static

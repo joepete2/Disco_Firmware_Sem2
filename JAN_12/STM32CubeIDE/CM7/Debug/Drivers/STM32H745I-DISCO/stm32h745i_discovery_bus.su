@@ -1,0 +1,16 @@
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_bus.c:188:9:BSP_I2C4_Init	16	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_bus.c:239:9:BSP_I2C4_DeInit	16	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_bus.c:267:26:MX_I2C4_Init	24	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_bus.c:313:9:BSP_I2C4_WriteReg	40	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_bus.c:350:9:BSP_I2C4_ReadReg	40	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_bus.c:387:9:BSP_I2C4_WriteReg16	40	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_bus.c:424:9:BSP_I2C4_ReadReg16	40	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_bus.c:460:9:BSP_I2C4_IsReady	24	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_bus.c:482:9:BSP_GetTick	8	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_bus.c:570:17:I2C_GetTiming	32	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_bus.c:608:13:I2C_Compute_PRESC_SCLDEL_SDADEL	64	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_bus.c:689:17:I2C_Compute_SCLL_SCLH	80	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_bus.c:767:13:I2C4_MspInit	48	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_bus.c:812:13:I2C4_MspDeInit	40	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_bus.c:838:16:I2C4_WriteReg	40	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_bus.c:857:16:I2C4_ReadReg	40	static

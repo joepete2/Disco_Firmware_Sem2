@@ -1,0 +1,2 @@
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/generated/images/src/BitmapDatabase.cpp:17:37:const touchgfx::Bitmap::BitmapData* BitmapDatabase::getInstance()	4	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/generated/images/src/BitmapDatabase.cpp:22:10:uint16_t BitmapDatabase::getInstanceSize()	4	static

@@ -55,9 +55,9 @@
 ../../../CM7/TouchGFX/target/TouchGFXHAL.hpp:50:5:TouchGFXHAL::TouchGFXHAL(touchgfx::DMA_Interface&, touchgfx::LCD&, touchgfx::TouchController&, uint16_t, uint16_t)	32	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp:26:7:constexpr touchgfx::TouchController::TouchController()	16	static
 ../../../CM7/TouchGFX/target/STM32TouchController.hpp:40:5:STM32TouchController::STM32TouchController()	16	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/CM7/TouchGFX/target/generated/TouchGFXConfiguration.cpp:42:6:void touchgfx_init()	32	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/CM7/TouchGFX/target/generated/TouchGFXConfiguration.cpp:62:6:void touchgfx_components_init()	4	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/CM7/TouchGFX/target/generated/TouchGFXConfiguration.cpp:66:6:void touchgfx_taskEntry()	8	static
+D:/STM32CubeIDE/Disco_Firmware_Sem2/JAN_19/CM7/TouchGFX/target/generated/TouchGFXConfiguration.cpp:42:6:void touchgfx_init()	32	static
+D:/STM32CubeIDE/Disco_Firmware_Sem2/JAN_19/CM7/TouchGFX/target/generated/TouchGFXConfiguration.cpp:62:6:void touchgfx_components_init()	4	static
+D:/STM32CubeIDE/Disco_Firmware_Sem2/JAN_19/CM7/TouchGFX/target/generated/TouchGFXConfiguration.cpp:66:6:void touchgfx_taskEntry()	8	static
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendHeap.hpp:6:7:FrontendHeap::~FrontendHeap()	16	static
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendHeap.hpp:6:7:virtual FrontendHeap::~FrontendHeap()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/common/Partition.hpp:42:7:touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::NoTransition, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, 1>::~Partition()	16	static
@@ -74,7 +74,7 @@ C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/CM7/TouchGFX/target/genera
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD32bpp.hpp:40:7:virtual touchgfx::LCD32bpp::~LCD32bpp()	16	static
 ../../../CM7/TouchGFX/target/STM32TouchController.hpp:36:7:STM32TouchController::~STM32TouchController()	16	static
 ../../../CM7/TouchGFX/target/STM32TouchController.hpp:36:7:virtual STM32TouchController::~STM32TouchController()	16	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/CM7/TouchGFX/target/generated/TouchGFXConfiguration.cpp:75:1:void __static_initialization_and_destruction_0(int, int)	24	static
+D:/STM32CubeIDE/Disco_Firmware_Sem2/JAN_19/CM7/TouchGFX/target/generated/TouchGFXConfiguration.cpp:75:1:void __static_initialization_and_destruction_0(int, int)	24	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:touchgfx::Callback<FrontendApplicationBase>::~Callback()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:virtual touchgfx::Callback<FrontendApplicationBase>::~Callback()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/common/Partition.hpp:58:22:uint16_t touchgfx::Partition<ListOfTypes, NUMBER_OF_ELEMENTS>::capacity() const [with ListOfTypes = touchgfx::meta::TypeList<touchgfx::NoTransition, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >; short unsigned int NUMBER_OF_ELEMENTS = 1]	16	static
@@ -91,5 +91,5 @@ C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/CM7/TouchGFX/target/genera
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/common/Partition.hpp:74:25:const void* touchgfx::Partition<ListOfTypes, NUMBER_OF_ELEMENTS>::element(uint16_t) const [with ListOfTypes = touchgfx::meta::TypeList<screenPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >; short unsigned int NUMBER_OF_ELEMENTS = 1]	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:449:18:void touchgfx::Callback<dest_type, void, void, void>::execute() [with dest_type = FrontendApplicationBase]	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:459:18:bool touchgfx::Callback<dest_type, void, void, void>::isValid() const [with dest_type = FrontendApplicationBase]	16	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/CM7/TouchGFX/target/generated/TouchGFXConfiguration.cpp:75:1:cpp)	8	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/CM7/TouchGFX/target/generated/TouchGFXConfiguration.cpp:75:1:cpp)	8	static
+D:/STM32CubeIDE/Disco_Firmware_Sem2/JAN_19/CM7/TouchGFX/target/generated/TouchGFXConfiguration.cpp:75:1:cpp)	8	static
+D:/STM32CubeIDE/Disco_Firmware_Sem2/JAN_19/CM7/TouchGFX/target/generated/TouchGFXConfiguration.cpp:75:1:cpp)	8	static

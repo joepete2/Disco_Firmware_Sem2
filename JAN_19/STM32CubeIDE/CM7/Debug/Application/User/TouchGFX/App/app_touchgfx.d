@@ -1,4 +1,4 @@
 Application/User/TouchGFX/App/app_touchgfx.o: \
- C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/CM7/TouchGFX/App/app_touchgfx.c \
- C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/CM7/TouchGFX/App/app_touchgfx.h
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/CM7/TouchGFX/App/app_touchgfx.h:
+ D:/STM32CubeIDE/Disco_Firmware_Sem2/JAN_19/CM7/TouchGFX/App/app_touchgfx.c \
+ D:/STM32CubeIDE/Disco_Firmware_Sem2/JAN_19/CM7/TouchGFX/App/app_touchgfx.h
+D:/STM32CubeIDE/Disco_Firmware_Sem2/JAN_19/CM7/TouchGFX/App/app_touchgfx.h:

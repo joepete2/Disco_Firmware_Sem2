@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
- C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/CM7/TouchGFX/target/generated/TouchGFXConfiguration.cpp \
+ D:/STM32CubeIDE/Disco_Firmware_Sem2/JAN_19/CM7/TouchGFX/target/generated/TouchGFXConfiguration.cpp \
  ../../CM7/../../CM7/TouchGFX/generated/texts/include/texts/TypedTextDatabase.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp \

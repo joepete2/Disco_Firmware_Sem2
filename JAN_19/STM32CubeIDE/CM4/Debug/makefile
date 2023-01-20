@@ -76,8 +76,8 @@ all: main-build
 main-build: JAN_19_CM4.elf secondary-outputs
 
 # Tool invocations
-JAN_19_CM4.elf JAN_19_CM4.map: $(OBJS) $(USER_OBJS) C:\Users\joepe\STM32CubeIDE\workspace_1.11.0_2\JAN_19\STM32CubeIDE\CM4\STM32H745XIHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "JAN_19_CM4.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\joepe\STM32CubeIDE\workspace_1.11.0_2\JAN_19\STM32CubeIDE\CM4\STM32H745XIHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="JAN_19_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+JAN_19_CM4.elf JAN_19_CM4.map: $(OBJS) $(USER_OBJS) D:\STM32CubeIDE\Disco_Firmware_Sem2\JAN_19\STM32CubeIDE\CM4\STM32H745XIHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "JAN_19_CM4.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\STM32CubeIDE\Disco_Firmware_Sem2\JAN_19\STM32CubeIDE\CM4\STM32H745XIHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="JAN_19_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

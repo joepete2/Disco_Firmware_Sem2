@@ -83,8 +83,8 @@ all: main-build
 main-build: JAN_19_CM7.elf secondary-outputs
 
 # Tool invocations
-JAN_19_CM7.elf JAN_19_CM7.map: $(OBJS) $(USER_OBJS) C:\Users\joepe\STM32CubeIDE\workspace_1.11.0_2\JAN_19\STM32CubeIDE\CM7\STM32H745XIHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "JAN_19_CM7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\joepe\STM32CubeIDE\workspace_1.11.0_2\JAN_19\STM32CubeIDE\CM7\STM32H745XIHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="JAN_19_CM7.map" -Wl,--gc-sections -static -LC:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/CM7/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+JAN_19_CM7.elf JAN_19_CM7.map: $(OBJS) $(USER_OBJS) D:\STM32CubeIDE\Disco_Firmware_Sem2\JAN_19\STM32CubeIDE\CM7\STM32H745XIHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "JAN_19_CM7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"D:\STM32CubeIDE\Disco_Firmware_Sem2\JAN_19\STM32CubeIDE\CM7\STM32H745XIHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="JAN_19_CM7.map" -Wl,--gc-sections -static -LD:/STM32CubeIDE/Disco_Firmware_Sem2/JAN_19/CM7/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

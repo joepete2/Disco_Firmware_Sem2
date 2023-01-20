@@ -1,5 +1,5 @@
 Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_sdram.o: \
- C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sdram.c \
+ D:/STM32CubeIDE/Disco_Firmware_Sem2/JAN_19/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sdram.c \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../../CM4/Core/Inc/stm32h7xx_hal_conf.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \

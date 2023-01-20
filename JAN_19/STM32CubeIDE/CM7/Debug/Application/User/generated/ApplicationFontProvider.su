@@ -1,0 +1,5 @@
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/FontManager.hpp:43:13:touchgfx::FontProvider::~FontProvider()	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/FontManager.hpp:43:13:virtual touchgfx::FontProvider::~FontProvider()	16	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/CM7/TouchGFX/generated/fonts/src/ApplicationFontProvider.cpp:8:17:virtual touchgfx::Font* ApplicationFontProvider::getFont(touchgfx::FontId)	16	static
+../../CM7/../../CM7/TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:29:7:ApplicationFontProvider::~ApplicationFontProvider()	16	static
+../../CM7/../../CM7/TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:29:7:virtual ApplicationFontProvider::~ApplicationFontProvider()	16	static

@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2022 STMicroelectronics.
+  * Copyright (c) 2023 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -28,9 +28,9 @@ using namespace touchgfx;
 
 namespace
 {
-static volatile bool refreshRequested = false;
-static uint16_t lcd_int_active_line;
-static uint16_t lcd_int_porch_line;
+    static volatile bool refreshRequested = false;
+    static uint16_t lcd_int_active_line;
+    static uint16_t lcd_int_porch_line;
 }
 
 void TouchGFXGeneratedHAL::initialize()

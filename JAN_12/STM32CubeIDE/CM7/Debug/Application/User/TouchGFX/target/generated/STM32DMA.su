@@ -23,12 +23,12 @@ C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/genera
 C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/generated/STM32DMA.cpp:142:16:virtual touchgfx::BlitOperations STM32DMA::getBlitCaps()	16	static
 C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/generated/STM32DMA.cpp:165:6:virtual void STM32DMA::setupDataCopy(const touchgfx::BlitOp&)	48	static
 C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/generated/STM32DMA.cpp:334:6:virtual void STM32DMA::setupDataFill(const touchgfx::BlitOp&)	32	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/generated/STM32DMA.cpp:404:6:void touchgfx::paint::rgb565::setL8Pallette(const uint8_t*)	16	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/generated/STM32DMA.cpp:415:6:void touchgfx::paint::rgb565::tearDown()	4	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/generated/STM32DMA.cpp:430:6:void touchgfx::paint::rgb565::lineFromColor(uint16_t*, unsigned int, uint32_t, uint8_t, uint32_t)	24	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/generated/STM32DMA.cpp:480:6:void touchgfx::paint::rgb565::lineFromRGB565(uint16_t*, const uint16_t*, unsigned int, uint8_t)	24	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/generated/STM32DMA.cpp:524:6:void touchgfx::paint::rgb565::lineFromARGB8888(uint16_t*, const uint32_t*, unsigned int, uint8_t)	24	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/generated/STM32DMA.cpp:557:6:void touchgfx::paint::rgb565::lineFromL8RGB888(uint16_t*, const uint8_t*, unsigned int, uint8_t)	24	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/generated/STM32DMA.cpp:622:6:void touchgfx::paint::rgb565::lineFromL8ARGB8888(uint16_t*, const uint8_t*, unsigned int, uint8_t)	24	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/generated/STM32DMA.cpp:404:10:void touchgfx::paint::rgb565::setL8Pallette(const uint8_t*)	16	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/generated/STM32DMA.cpp:415:10:void touchgfx::paint::rgb565::tearDown()	4	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/generated/STM32DMA.cpp:430:10:void touchgfx::paint::rgb565::lineFromColor(uint16_t*, unsigned int, uint32_t, uint8_t, uint32_t)	24	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/generated/STM32DMA.cpp:480:10:void touchgfx::paint::rgb565::lineFromRGB565(uint16_t*, const uint16_t*, unsigned int, uint8_t)	24	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/generated/STM32DMA.cpp:524:10:void touchgfx::paint::rgb565::lineFromARGB8888(uint16_t*, const uint32_t*, unsigned int, uint8_t)	24	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/generated/STM32DMA.cpp:557:10:void touchgfx::paint::rgb565::lineFromL8RGB888(uint16_t*, const uint8_t*, unsigned int, uint8_t)	24	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/TouchGFX/target/generated/STM32DMA.cpp:622:10:void touchgfx::paint::rgb565::lineFromL8ARGB8888(uint16_t*, const uint8_t*, unsigned int, uint8_t)	24	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/DMA.hpp:87:7:touchgfx::LockFreeDMA_Queue::~LockFreeDMA_Queue()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/DMA.hpp:87:7:virtual touchgfx::LockFreeDMA_Queue::~LockFreeDMA_Queue()	16	static

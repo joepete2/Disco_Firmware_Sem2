@@ -29,15 +29,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  12 .debug_ranges 000005e8  00000000  00000000  000279d0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_macro  00036ec6  00000000  00000000  00027fb8  2**0
+ 13 .debug_macro  00063acb  00000000  00000000  00027fb8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_line   00006e9a  00000000  00000000  0005ee7e  2**0
+ 14 .debug_line   00006e9a  00000000  00000000  0008ba83  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_str    0016dc41  00000000  00000000  00065d18  2**0
+ 15 .debug_str    00171156  00000000  00000000  0009291d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .comment      00000050  00000000  00000000  001d3959  2**0
+ 16 .comment      00000050  00000000  00000000  00203a73  2**0
                   CONTENTS, READONLY
- 17 .debug_frame  000018a8  00000000  00000000  001d39ac  2**2
+ 17 .debug_frame  000018a8  00000000  00000000  00203ac4  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1371,21 +1371,21 @@ void HAL_PWREx_ClearPendingEvent (void)
 	...
 
 081008dc <HAL_RCC_GetSysClockFreq>:
-  *
-  *
-  * @retval SYSCLK frequency
-  */
-uint32_t HAL_RCC_GetSysClockFreq(void)
-{
+  * @note     If SYSCLK source is PLL, function returns values based on CSI_VALUE(*),
+  *           HSI_VALUE(**) or HSE_VALUE(***) multiplied/divided by the PLL factors.
+  * @note     (*) CSI_VALUE is a constant defined in stm32h7xx_hal_conf.h file (default value
+  *               4 MHz) but the real value may vary depending on the variations
+  *               in voltage and temperature.
+  * @note     (**) HSI_VALUE is a constant defined in stm32h7xx_hal_conf.h file (default value
  81008dc:	b480      	push	{r7}
  81008de:	b089      	sub	sp, #36	; 0x24
  81008e0:	af00      	add	r7, sp, #0
-  float_t fracn1, pllvco;
-  uint32_t sysclockfreq;
-
-  /* Get SYSCLK source -------------------------------------------------------*/
-
-  switch (RCC->CFGR & RCC_CFGR_SWS)
+  *               in voltage and temperature.
+  * @note     (***) HSE_VALUE is a constant defined in stm32h7xx_hal_conf.h file (default value
+  *                25 MHz), user has to ensure that HSE_VALUE is same as the real
+  *                frequency of the crystal used. Otherwise, this function may
+  *                have wrong result.
+  *
  81008e2:	4bb3      	ldr	r3, [pc, #716]	; (8100bb0 <HAL_RCC_GetSysClockFreq+0x2d4>)
  81008e4:	691b      	ldr	r3, [r3, #16]
  81008e6:	f003 0338 	and.w	r3, r3, #56	; 0x38
@@ -1419,17 +1419,17 @@ uint32_t HAL_RCC_GetSysClockFreq(void)
  8100950:	08100b9b 	.word	0x08100b9b
  8100954:	08100b9b 	.word	0x08100b9b
  8100958:	0810098f 	.word	0x0810098f
-  {
-  case RCC_CFGR_SWS_HSI:  /* HSI used as system clock source */
-
-   if (__HAL_RCC_GET_FLAG(RCC_FLAG_HSIDIV) != 0U)
+  * @note   The result of this function could be not correct when using fractional
+  *         value for HSE crystal.
+  *
+  * @note   This function can be used by the user application to compute the
  810095c:	4b94      	ldr	r3, [pc, #592]	; (8100bb0 <HAL_RCC_GetSysClockFreq+0x2d4>)
  810095e:	681b      	ldr	r3, [r3, #0]
  8100960:	f003 0320 	and.w	r3, r3, #32
  8100964:	2b00      	cmp	r3, #0
  8100966:	d009      	beq.n	810097c <HAL_RCC_GetSysClockFreq+0xa0>
-      {
-        sysclockfreq = (uint32_t) (HSI_VALUE >> (__HAL_RCC_GET_HSI_DIVIDER()>> 3));
+  *         baud rate for the communication peripherals or configure other parameters.
+  *
  8100968:	4b91      	ldr	r3, [pc, #580]	; (8100bb0 <HAL_RCC_GetSysClockFreq+0x2d4>)
  810096a:	681b      	ldr	r3, [r3, #0]
  810096c:	08db      	lsrs	r3, r3, #3
@@ -1437,54 +1437,54 @@ uint32_t HAL_RCC_GetSysClockFreq(void)
  8100972:	4a90      	ldr	r2, [pc, #576]	; (8100bb4 <HAL_RCC_GetSysClockFreq+0x2d8>)
  8100974:	fa22 f303 	lsr.w	r3, r2, r3
  8100978:	61bb      	str	r3, [r7, #24]
-      else
-      {
-        sysclockfreq = (uint32_t) HSI_VALUE;
-      }
-
-    break;
+  *         right SYSCLK value. Otherwise, any configuration based on this function will be incorrect.
+  *
+  *
+  * @retval SYSCLK frequency
+  */
+uint32_t HAL_RCC_GetSysClockFreq(void)
  810097a:	e111      	b.n	8100ba0 <HAL_RCC_GetSysClockFreq+0x2c4>
-        sysclockfreq = (uint32_t) HSI_VALUE;
+  *
  810097c:	4b8d      	ldr	r3, [pc, #564]	; (8100bb4 <HAL_RCC_GetSysClockFreq+0x2d8>)
  810097e:	61bb      	str	r3, [r7, #24]
-    break;
+uint32_t HAL_RCC_GetSysClockFreq(void)
  8100980:	e10e      	b.n	8100ba0 <HAL_RCC_GetSysClockFreq+0x2c4>
-
-  case RCC_CFGR_SWS_CSI:  /* CSI used as system clock  source */
-    sysclockfreq = CSI_VALUE;
+{
+  uint32_t pllp, pllsource, pllm, pllfracen, hsivalue;
+  float_t fracn1, pllvco;
  8100982:	4b8d      	ldr	r3, [pc, #564]	; (8100bb8 <HAL_RCC_GetSysClockFreq+0x2dc>)
  8100984:	61bb      	str	r3, [r7, #24]
-    break;
+  uint32_t sysclockfreq;
  8100986:	e10b      	b.n	8100ba0 <HAL_RCC_GetSysClockFreq+0x2c4>
 
-  case RCC_CFGR_SWS_HSE:  /* HSE used as system clock  source */
-    sysclockfreq = HSE_VALUE;
+  /* Get SYSCLK source -------------------------------------------------------*/
+
  8100988:	4b8c      	ldr	r3, [pc, #560]	; (8100bbc <HAL_RCC_GetSysClockFreq+0x2e0>)
  810098a:	61bb      	str	r3, [r7, #24]
-    break;
+  switch (RCC->CFGR & RCC_CFGR_SWS)
  810098c:	e108      	b.n	8100ba0 <HAL_RCC_GetSysClockFreq+0x2c4>
-  case RCC_CFGR_SWS_PLL1:  /* PLL1 used as system clock  source */
+    case RCC_CFGR_SWS_HSI:  /* HSI used as system clock source */
 
-    /* PLL_VCO = (HSE_VALUE or HSI_VALUE or CSI_VALUE/ PLLM) * PLLN
-    SYSCLK = PLL_VCO / PLLR
-    */
-    pllsource = (RCC->PLLCKSELR & RCC_PLLCKSELR_PLLSRC);
+      if (__HAL_RCC_GET_FLAG(RCC_FLAG_HSIDIV) != 0U)
+      {
+        sysclockfreq = (uint32_t)(HSI_VALUE >> (__HAL_RCC_GET_HSI_DIVIDER() >> 3));
+      }
  810098e:	4b88      	ldr	r3, [pc, #544]	; (8100bb0 <HAL_RCC_GetSysClockFreq+0x2d4>)
  8100990:	6a9b      	ldr	r3, [r3, #40]	; 0x28
  8100992:	f003 0303 	and.w	r3, r3, #3
  8100996:	617b      	str	r3, [r7, #20]
-    pllm = ((RCC->PLLCKSELR & RCC_PLLCKSELR_DIVM1)>> 4)  ;
+      else
  8100998:	4b85      	ldr	r3, [pc, #532]	; (8100bb0 <HAL_RCC_GetSysClockFreq+0x2d4>)
  810099a:	6a9b      	ldr	r3, [r3, #40]	; 0x28
  810099c:	091b      	lsrs	r3, r3, #4
  810099e:	f003 033f 	and.w	r3, r3, #63	; 0x3f
  81009a2:	613b      	str	r3, [r7, #16]
-    pllfracen = ((RCC-> PLLCFGR & RCC_PLLCFGR_PLL1FRACEN)>>RCC_PLLCFGR_PLL1FRACEN_Pos);
+      {
  81009a4:	4b82      	ldr	r3, [pc, #520]	; (8100bb0 <HAL_RCC_GetSysClockFreq+0x2d4>)
  81009a6:	6adb      	ldr	r3, [r3, #44]	; 0x2c
  81009a8:	f003 0301 	and.w	r3, r3, #1
  81009ac:	60fb      	str	r3, [r7, #12]
-    fracn1 = (float_t)(uint32_t)(pllfracen* ((RCC->PLL1FRACR & RCC_PLL1FRACR_FRACN1)>> 3));
+        sysclockfreq = (uint32_t) HSI_VALUE;
  81009ae:	4b80      	ldr	r3, [pc, #512]	; (8100bb0 <HAL_RCC_GetSysClockFreq+0x2d4>)
  81009b0:	6b5b      	ldr	r3, [r3, #52]	; 0x34
  81009b2:	08db      	lsrs	r3, r3, #3
@@ -1494,8 +1494,8 @@ uint32_t HAL_RCC_GetSysClockFreq(void)
  81009be:	ee07 3a90 	vmov	s15, r3
  81009c2:	eef8 7a67 	vcvt.f32.u32	s15, s15
  81009c6:	edc7 7a02 	vstr	s15, [r7, #8]
+      }
 
-    if (pllm != 0U)
  81009ca:	693b      	ldr	r3, [r7, #16]
  81009cc:	2b00      	cmp	r3, #0
  81009ce:	f000 80e1 	beq.w	8100b94 <HAL_RCC_GetSysClockFreq+0x2b8>
@@ -1512,19 +1512,19 @@ uint32_t HAL_RCC_GetSysClockFreq(void)
  81009ea:	2b01      	cmp	r3, #1
  81009ec:	d056      	beq.n	8100a9c <HAL_RCC_GetSysClockFreq+0x1c0>
  81009ee:	e099      	b.n	8100b24 <HAL_RCC_GetSysClockFreq+0x248>
-    {
-      switch (pllsource)
-      {
-      case RCC_PLLSOURCE_HSI:  /* HSI used as PLL clock source */
+      break;
 
-       if (__HAL_RCC_GET_FLAG(RCC_FLAG_HSIDIV) != 0U)
+    case RCC_CFGR_SWS_CSI:  /* CSI used as system clock  source */
+      sysclockfreq = CSI_VALUE;
+      break;
+
  81009f0:	4b6f      	ldr	r3, [pc, #444]	; (8100bb0 <HAL_RCC_GetSysClockFreq+0x2d4>)
  81009f2:	681b      	ldr	r3, [r3, #0]
  81009f4:	f003 0320 	and.w	r3, r3, #32
  81009f8:	2b00      	cmp	r3, #0
  81009fa:	d02d      	beq.n	8100a58 <HAL_RCC_GetSysClockFreq+0x17c>
-        {
-          hsivalue= (HSI_VALUE >> (__HAL_RCC_GET_HSI_DIVIDER()>> 3));
+    case RCC_CFGR_SWS_HSE:  /* HSE used as system clock  source */
+      sysclockfreq = HSE_VALUE;
  81009fc:	4b6c      	ldr	r3, [pc, #432]	; (8100bb0 <HAL_RCC_GetSysClockFreq+0x2d4>)
  81009fe:	681b      	ldr	r3, [r3, #0]
  8100a00:	08db      	lsrs	r3, r3, #3
@@ -1532,7 +1532,7 @@ uint32_t HAL_RCC_GetSysClockFreq(void)
  8100a06:	4a6b      	ldr	r2, [pc, #428]	; (8100bb4 <HAL_RCC_GetSysClockFreq+0x2d8>)
  8100a08:	fa22 f303 	lsr.w	r3, r2, r3
  8100a0c:	607b      	str	r3, [r7, #4]
-          pllvco = ( (float_t)hsivalue / (float_t)pllm) * ((float_t)(uint32_t)(RCC->PLL1DIVR & RCC_PLL1DIVR_N1) + (fracn1/(float_t)0x2000) +(float_t)1 );
+      break;
  8100a0e:	687b      	ldr	r3, [r7, #4]
  8100a10:	ee07 3a90 	vmov	s15, r3
  8100a14:	eef8 6a67 	vcvt.f32.u32	s13, s15
@@ -1553,14 +1553,14 @@ uint32_t HAL_RCC_GetSysClockFreq(void)
  8100a4a:	ee77 7aa6 	vadd.f32	s15, s15, s13
  8100a4e:	ee67 7a27 	vmul.f32	s15, s14, s15
  8100a52:	edc7 7a07 	vstr	s15, [r7, #28]
-        }
-        else
-        {
-          pllvco = ((float_t)HSI_VALUE / (float_t)pllm) * ((float_t)(uint32_t)(RCC->PLL1DIVR & RCC_PLL1DIVR_N1) + (fracn1/(float_t)0x2000) +(float_t)1 );
-        }
-        break;
+
+    case RCC_CFGR_SWS_PLL1:  /* PLL1 used as system clock  source */
+
+      /* PLL_VCO = (HSE_VALUE or HSI_VALUE or CSI_VALUE/ PLLM) * PLLN
+      SYSCLK = PLL_VCO / PLLR
+      */
  8100a56:	e087      	b.n	8100b68 <HAL_RCC_GetSysClockFreq+0x28c>
-          pllvco = ((float_t)HSI_VALUE / (float_t)pllm) * ((float_t)(uint32_t)(RCC->PLL1DIVR & RCC_PLL1DIVR_N1) + (fracn1/(float_t)0x2000) +(float_t)1 );
+      /* PLL_VCO = (HSE_VALUE or HSI_VALUE or CSI_VALUE/ PLLM) * PLLN
  8100a58:	693b      	ldr	r3, [r7, #16]
  8100a5a:	ee07 3a90 	vmov	s15, r3
  8100a5e:	eef8 7a67 	vcvt.f32.u32	s15, s15
@@ -1579,11 +1579,11 @@ uint32_t HAL_RCC_GetSysClockFreq(void)
  8100a8e:	ee77 7aa6 	vadd.f32	s15, s15, s13
  8100a92:	ee67 7a27 	vmul.f32	s15, s14, s15
  8100a96:	edc7 7a07 	vstr	s15, [r7, #28]
-        break;
+      */
  8100a9a:	e065      	b.n	8100b68 <HAL_RCC_GetSysClockFreq+0x28c>
-
-      case RCC_PLLSOURCE_CSI:  /* CSI used as PLL clock source */
-        pllvco = ((float_t)CSI_VALUE / (float_t)pllm) * ((float_t)(uint32_t)(RCC->PLL1DIVR & RCC_PLL1DIVR_N1) + (fracn1/(float_t)0x2000) +(float_t)1 );
+      pllsource = (RCC->PLLCKSELR & RCC_PLLCKSELR_PLLSRC);
+      pllm = ((RCC->PLLCKSELR & RCC_PLLCKSELR_DIVM1) >> 4)  ;
+      pllfracen = ((RCC-> PLLCFGR & RCC_PLLCFGR_PLL1FRACEN) >> RCC_PLLCFGR_PLL1FRACEN_Pos);
  8100a9c:	693b      	ldr	r3, [r7, #16]
  8100a9e:	ee07 3a90 	vmov	s15, r3
  8100aa2:	eef8 7a67 	vcvt.f32.u32	s15, s15
@@ -1602,11 +1602,11 @@ uint32_t HAL_RCC_GetSysClockFreq(void)
  8100ad2:	ee77 7aa6 	vadd.f32	s15, s15, s13
  8100ad6:	ee67 7a27 	vmul.f32	s15, s14, s15
  8100ada:	edc7 7a07 	vstr	s15, [r7, #28]
-        break;
+      fracn1 = (float_t)(uint32_t)(pllfracen * ((RCC->PLL1FRACR & RCC_PLL1FRACR_FRACN1) >> 3));
  8100ade:	e043      	b.n	8100b68 <HAL_RCC_GetSysClockFreq+0x28c>
 
-      case RCC_PLLSOURCE_HSE:  /* HSE used as PLL clock source */
-        pllvco = ((float_t)HSE_VALUE / (float_t)pllm) * ((float_t)(uint32_t)(RCC->PLL1DIVR & RCC_PLL1DIVR_N1) + (fracn1/(float_t)0x2000) +(float_t)1 );
+      if (pllm != 0U)
+      {
  8100ae0:	693b      	ldr	r3, [r7, #16]
  8100ae2:	ee07 3a90 	vmov	s15, r3
  8100ae6:	eef8 7a67 	vcvt.f32.u32	s15, s15
@@ -1625,11 +1625,11 @@ uint32_t HAL_RCC_GetSysClockFreq(void)
  8100b16:	ee77 7aa6 	vadd.f32	s15, s15, s13
  8100b1a:	ee67 7a27 	vmul.f32	s15, s14, s15
  8100b1e:	edc7 7a07 	vstr	s15, [r7, #28]
-        break;
+        switch (pllsource)
  8100b22:	e021      	b.n	8100b68 <HAL_RCC_GetSysClockFreq+0x28c>
+        {
+          case RCC_PLLSOURCE_HSI:  /* HSI used as PLL clock source */
 
-      default:
-        pllvco = ((float_t)CSI_VALUE / (float_t)pllm) * ((float_t)(uint32_t)(RCC->PLL1DIVR & RCC_PLL1DIVR_N1) + (fracn1/(float_t)0x2000) +(float_t)1 );
  8100b24:	693b      	ldr	r3, [r7, #16]
  8100b26:	ee07 3a90 	vmov	s15, r3
  8100b2a:	eef8 7a67 	vcvt.f32.u32	s15, s15
@@ -1648,17 +1648,17 @@ uint32_t HAL_RCC_GetSysClockFreq(void)
  8100b5a:	ee77 7aa6 	vadd.f32	s15, s15, s13
  8100b5e:	ee67 7a27 	vmul.f32	s15, s14, s15
  8100b62:	edc7 7a07 	vstr	s15, [r7, #28]
-        break;
+            if (__HAL_RCC_GET_FLAG(RCC_FLAG_HSIDIV) != 0U)
  8100b66:	bf00      	nop
-      }
-      pllp = (((RCC->PLL1DIVR & RCC_PLL1DIVR_P1) >>9) + 1U ) ;
+            {
+              hsivalue = (HSI_VALUE >> (__HAL_RCC_GET_HSI_DIVIDER() >> 3));
  8100b68:	4b11      	ldr	r3, [pc, #68]	; (8100bb0 <HAL_RCC_GetSysClockFreq+0x2d4>)
  8100b6a:	6b1b      	ldr	r3, [r3, #48]	; 0x30
  8100b6c:	0a5b      	lsrs	r3, r3, #9
  8100b6e:	f003 037f 	and.w	r3, r3, #127	; 0x7f
  8100b72:	3301      	adds	r3, #1
  8100b74:	603b      	str	r3, [r7, #0]
-      sysclockfreq =  (uint32_t)(float_t)(pllvco/(float_t)pllp);
+              pllvco = ((float_t)hsivalue / (float_t)pllm) * ((float_t)(uint32_t)(RCC->PLL1DIVR & RCC_PLL1DIVR_N1) + (fracn1 / (float_t)0x2000) + (float_t)1);
  8100b76:	683b      	ldr	r3, [r7, #0]
  8100b78:	ee07 3a90 	vmov	s15, r3
  8100b7c:	eeb8 7a67 	vcvt.f32.u32	s14, s15
@@ -1667,30 +1667,30 @@ uint32_t HAL_RCC_GetSysClockFreq(void)
  8100b88:	eefc 7ae7 	vcvt.u32.f32	s15, s15
  8100b8c:	ee17 3a90 	vmov	r3, s15
  8100b90:	61bb      	str	r3, [r7, #24]
-    }
-    else
-    {
-      sysclockfreq = 0U;
-    }
-    break;
+            }
+            else
+            {
+              pllvco = ((float_t)HSI_VALUE / (float_t)pllm) * ((float_t)(uint32_t)(RCC->PLL1DIVR & RCC_PLL1DIVR_N1) + (fracn1 / (float_t)0x2000) + (float_t)1);
+            }
+            break;
  8100b92:	e005      	b.n	8100ba0 <HAL_RCC_GetSysClockFreq+0x2c4>
-      sysclockfreq = 0U;
+              pllvco = ((float_t)HSI_VALUE / (float_t)pllm) * ((float_t)(uint32_t)(RCC->PLL1DIVR & RCC_PLL1DIVR_N1) + (fracn1 / (float_t)0x2000) + (float_t)1);
  8100b94:	2300      	movs	r3, #0
  8100b96:	61bb      	str	r3, [r7, #24]
-    break;
+            break;
  8100b98:	e002      	b.n	8100ba0 <HAL_RCC_GetSysClockFreq+0x2c4>
 
-  default:
-    sysclockfreq = CSI_VALUE;
+          case RCC_PLLSOURCE_CSI:  /* CSI used as PLL clock source */
+            pllvco = ((float_t)CSI_VALUE / (float_t)pllm) * ((float_t)(uint32_t)(RCC->PLL1DIVR & RCC_PLL1DIVR_N1) + (fracn1 / (float_t)0x2000) + (float_t)1);
  8100b9a:	4b07      	ldr	r3, [pc, #28]	; (8100bb8 <HAL_RCC_GetSysClockFreq+0x2dc>)
  8100b9c:	61bb      	str	r3, [r7, #24]
-    break;
+            break;
  8100b9e:	bf00      	nop
-  }
 
-  return sysclockfreq;
+          case RCC_PLLSOURCE_HSE:  /* HSE used as PLL clock source */
+            pllvco = ((float_t)HSE_VALUE / (float_t)pllm) * ((float_t)(uint32_t)(RCC->PLL1DIVR & RCC_PLL1DIVR_N1) + (fracn1 / (float_t)0x2000) + (float_t)1);
  8100ba0:	69bb      	ldr	r3, [r7, #24]
-}
+            break;
  8100ba2:	4618      	mov	r0, r3
  8100ba4:	3724      	adds	r7, #36	; 0x24
  8100ba6:	46bd      	mov	sp, r7

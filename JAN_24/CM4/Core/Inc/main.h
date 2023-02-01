@@ -51,6 +51,7 @@ extern "C" {
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
+void   MX_GPIO_Init(void);
 
 /* USER CODE BEGIN EFP */
 
@@ -63,8 +64,6 @@ void Error_Handler(void);
 #define SDIO1_D2_GPIO_Port GPIOC
 #define MII_TX_EN_Pin GPIO_PIN_11
 #define MII_TX_EN_GPIO_Port GPIOG
-#define LCD_DISP_Pin GPIO_PIN_15
-#define LCD_DISP_GPIO_Port GPIOJ
 #define SDIO1_D3_Pin GPIO_PIN_11
 #define SDIO1_D3_GPIO_Port GPIOC
 #define FDCAN2_RXH14_Pin GPIO_PIN_14
@@ -87,18 +86,12 @@ void Error_Handler(void);
 #define MII_TXD0_GPIO_Port GPIOG
 #define SDIO1_CMD_Pin GPIO_PIN_2
 #define SDIO1_CMD_GPIO_Port GPIOD
-#define VBUS_FS2_Pin GPIO_PIN_9
-#define VBUS_FS2_GPIO_Port GPIOA
 #define FDCAN1_TX_Pin GPIO_PIN_13
 #define FDCAN1_TX_GPIO_Port GPIOH
 #define SDIO1_D0_Pin GPIO_PIN_8
 #define SDIO1_D0_GPIO_Port GPIOC
 #define SDIO1_D1_Pin GPIO_PIN_9
 #define SDIO1_D1_GPIO_Port GPIOC
-#define USB_OTG_FS2_P_Pin GPIO_PIN_12
-#define USB_OTG_FS2_P_GPIO_Port GPIOA
-#define USB_OTG_FS2_N_Pin GPIO_PIN_11
-#define USB_OTG_FS2_N_GPIO_Port GPIOA
 #define MII_RX_ER_Pin GPIO_PIN_10
 #define MII_RX_ER_GPIO_Port GPIOI
 #define SDIO1_D7_Pin GPIO_PIN_7
@@ -123,10 +116,6 @@ void Error_Handler(void);
 #define MII_RX_CLK_GPIO_Port GPIOA
 #define MII_COL_Pin GPIO_PIN_3
 #define MII_COL_GPIO_Port GPIOH
-#define VCP_TX_Pin GPIO_PIN_10
-#define VCP_TX_GPIO_Port GPIOB
-#define VCP_RX_Pin GPIO_PIN_11
-#define VCP_RX_GPIO_Port GPIOB
 #define MII_RX_DV_Pin GPIO_PIN_7
 #define MII_RX_DV_GPIO_Port GPIOA
 #define MII_RXD0_Pin GPIO_PIN_4

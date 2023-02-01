@@ -65,6 +65,10 @@ void Error_Handler(void);
 #define OSC_OUT_GPIO_Port GPIOH
 #define OSC_IN_Pin GPIO_PIN_0
 #define OSC_IN_GPIO_Port GPIOH
+#define VCP_TX_Pin GPIO_PIN_10
+#define VCP_TX_GPIO_Port GPIOB
+#define VCP_RX_Pin GPIO_PIN_11
+#define VCP_RX_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

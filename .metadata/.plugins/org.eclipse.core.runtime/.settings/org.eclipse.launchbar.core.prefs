@@ -2,8 +2,11 @@ LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
 activeLaunchTarget=null\:---
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:stm32h745i_disco_CM7 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:JAN_19_CM4 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:JAN_24_CM4 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:JAN_24_CM7 Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:JAN_24_CM4 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:JAN_24_CM7 Debug
 eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:JAN_24_CM4\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:JAN_24_CM4\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:JAN_24_CM7\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:stm32h745i_disco_CM4\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:stm32h745i_disco_CM4\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:stm32h745i_disco_CM7\ Debug/activeLaunchMode=debug

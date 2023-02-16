@@ -1,3 +1,0 @@
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/Core/Src/stm32h7xx_hal_timebase_tim.c:42:19:HAL_InitTick	72	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/Core/Src/stm32h7xx_hal_timebase_tim.c:114:6:HAL_SuspendTick	4	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_12/CM7/Core/Src/stm32h7xx_hal_timebase_tim.c:126:6:HAL_ResumeTick	4	static

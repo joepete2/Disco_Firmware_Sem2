@@ -1,5 +1,0 @@
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/CM7/TouchGFX/target/TouchGFXGPIO.cpp:45:6:static void touchgfx::GPIO::init()	4	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/CM7/TouchGFX/target/TouchGFXGPIO.cpp:53:6:static void touchgfx::GPIO::set(touchgfx::GPIO::GPIO_ID)	16	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/CM7/TouchGFX/target/TouchGFXGPIO.cpp:83:6:static void touchgfx::GPIO::clear(touchgfx::GPIO::GPIO_ID)	16	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/CM7/TouchGFX/target/TouchGFXGPIO.cpp:113:6:static void touchgfx::GPIO::toggle(touchgfx::GPIO::GPIO_ID)	16	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_19/CM7/TouchGFX/target/TouchGFXGPIO.cpp:143:6:static bool touchgfx::GPIO::get(touchgfx::GPIO::GPIO_ID)	24	static

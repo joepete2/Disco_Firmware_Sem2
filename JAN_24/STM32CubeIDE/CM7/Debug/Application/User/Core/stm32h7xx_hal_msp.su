@@ -1,7 +1,10 @@
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/stm32h7xx_hal_msp.c:63:6:HAL_MspInit	16	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/stm32h7xx_hal_msp.c:84:6:HAL_SPI_MspInit	248	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/stm32h7xx_hal_msp.c:147:6:HAL_SPI_MspDeInit	16	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/stm32h7xx_hal_msp.c:179:6:HAL_TIM_Base_MspInit	24	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/stm32h7xx_hal_msp.c:204:6:HAL_TIM_Base_MspDeInit	16	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/stm32h7xx_hal_msp.c:229:6:HAL_UART_MspInit	240	static
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/stm32h7xx_hal_msp.c:276:6:HAL_UART_MspDeInit	16	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/stm32h7xx_hal_msp.c:65:6:HAL_MspInit	16	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/stm32h7xx_hal_msp.c:86:6:HAL_SPI_MspInit	280	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/stm32h7xx_hal_msp.c:244:6:HAL_SPI_MspDeInit	16	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/stm32h7xx_hal_msp.c:322:6:HAL_TIM_Base_MspInit	32	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/stm32h7xx_hal_msp.c:372:6:HAL_TIM_PWM_MspInit	24	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/stm32h7xx_hal_msp.c:391:6:HAL_TIM_MspPostInit	48	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/stm32h7xx_hal_msp.c:464:6:HAL_TIM_Base_MspDeInit	16	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/stm32h7xx_hal_msp.c:514:6:HAL_TIM_PWM_MspDeInit	16	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/stm32h7xx_hal_msp.c:539:6:HAL_UART_MspInit	240	static
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/stm32h7xx_hal_msp.c:586:6:HAL_UART_MspDeInit	16	static

@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="UART"/>
+		<item key="selection" value="GPIO_PIN_13"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="gpio_pin_13"/>
+			<item value="collected"/>
+			<item value="spi_read"/>
+			<item value="spec_rst"/>
 			<item value="uart"/>
+			<item value="tim2"/>
+			<item value="wait"/>
+			<item value="2"/>
+			<item value="spi_buf"/>
 			<item value="HAL_GPIO_TogglePin(GPIOI,GPIO_PIN_13);"/>
 			<item value="ext"/>
 			<item value="pwm"/>
 			<item value="tim1"/>
 			<item value="pa8"/>
 			<item value="matth"/>
-			<item value="matthew"/>
-			<item value="counter"/>
-			<item value="private"/>
-			<item value="pd"/>
-			<item value="user code begin ptd"/>
-			<item value="private user code"/>
-			<item value="tim"/>
-			<item value="usart"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1760"/>
+		<item key="DIALOG_X_ORIGIN" value="1756"/>
 		<item key="DIALOG_Y_ORIGIN" value="425"/>
 		<item key="DIALOG_WIDTH" value="511"/>
 		<item key="DIALOG_HEIGHT" value="523"/>

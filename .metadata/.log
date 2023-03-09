@@ -8685,3 +8685,2732 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-02-16 08:10:29.268
 !MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 08:54:45.555
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 08:54:45.558
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 08:54:45.578
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 08:54:45.579
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2023-02-16 08:54:55.617
+!MESSAGE ST-LINK GDB server failed to start (exit code = 4)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-02-16 08:54:55.812
+!MESSAGE Error in final launch sequence:
+
+Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to start GDB server
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:328)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (4) No device found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1691)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:194)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:95)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:197)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:102)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-02-16 08:54:55.815
+!MESSAGE Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (4) No device found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1691)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:194)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:95)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:197)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:102)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+!SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2023-02-16 08:54:55.815
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (4) No device found on target.
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 08:55:56.852
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 08:55:56.864
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 08:55:56.873
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 08:55:56.878
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 08:59:55.878
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 08:59:55.878
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 08:59:55.878
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 08:59:55.878
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:02:06.042
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:02:06.043
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:02:06.052
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:02:06.053
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:06:33.982
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:06:33.982
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:06:33.991
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:06:33.997
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:19:22.029
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:19:22.045
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:19:22.045
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:19:22.058
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-02-16 09:39:17.947
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 8.07 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-02-16 09:39:23.946
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 5.95 sec: 10,643 declarations; 91,725 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:40:06.276
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:40:06.276
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:40:06.308
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:40:06.311
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:45:31.967
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:45:31.967
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:45:31.987
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-16 09:45:31.988
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.debug.ui 4 120 2023-02-16 09:46:38.489
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Output Stream is closed
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:265)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:260)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$StreamListener.streamAppended(ProcessConsole.java:809)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:172)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.fireStreamAppended(OutputStreamMonitor.java:169)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:259)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:228)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.core.jobs 4 2 2023-02-16 09:46:38.941
+!MESSAGE An internal error occurred during: "Execute Debug Command".
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: assertion failed: The application has not been initialized.
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:113)
+	at org.eclipse.core.internal.runtime.InternalPlatform.assertInitialized(InternalPlatform.java:139)
+	at org.eclipse.core.internal.runtime.InternalPlatform.getAdapterManager(InternalPlatform.java:160)
+	at org.eclipse.core.runtime.Platform.getAdapterManager(Platform.java:649)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.getAdapter(GdbLaunch.java:454)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.disconnect(GdbLaunch.java:338)
+	at org.eclipse.debug.internal.core.commands.DisconnectCommand.execute(DisconnectCommand.java:35)
+	at org.eclipse.debug.internal.core.commands.ForEachCommand.doExecute(ForEachCommand.java:36)
+	at org.eclipse.debug.core.commands.AbstractDebugCommand$1.run(AbstractDebugCommand.java:215)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-02-16 09:46:39.005
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+java.lang.NullPointerException
+	at com.st.stm32cube.ide.mcu.debug.launch.Activator$DebugEventListener.noActiveSessions(Activator.java:110)
+	at com.st.stm32cube.ide.mcu.debug.launch.Activator$DebugEventListener.handleDebugEvents(Activator.java:85)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2023-02-16 09:46:39.005
+!MESSAGE An internal error occurred during: "Debug Event Dispatch".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.debug.core.DebugPlugin.log(DebugPlugin.java:1056)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.handleException(DebugPlugin.java:1200)
+	at org.eclipse.core.runtime.SafeRunner.handleException(SafeRunner.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-02-16 09:46:39.350
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
+!SESSION 2023-02-17 08:29:27.220 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-02-17 08:29:57.932
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-02-17 08:29:58.073
+!MESSAGE Log4j initialized with config file C:\Users\joepe\STM32CubeIDE\workspace_1.11.0_2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-02-17 08:30:12.416
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 08:49:39.043
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 08:49:39.043
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 08:49:39.075
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 08:49:39.075
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 08:57:14.942
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 08:57:14.942
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 08:57:14.958
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 08:57:14.958
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 08:59:10.906
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 08:59:10.906
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 08:59:10.953
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 08:59:10.953
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:00:01.297
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:00:01.297
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:00:01.297
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:00:01.297
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:05:50.961
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:05:50.961
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:05:50.976
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:05:50.976
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:07:34.383
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:07:34.383
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:07:34.398
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:07:34.398
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:19:11.182
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:19:11.182
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:19:11.260
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:19:11.260
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:20:57.568
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:20:57.568
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:20:57.583
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:20:57.599
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:25:02.084
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:25:02.084
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:25:02.099
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:25:02.099
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-02-17 09:28:14.203
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 8.59 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-02-17 09:28:20.830
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 5.55 sec: 10,644 declarations; 91,731 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:28:22.497
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:28:22.497
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:28:22.497
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:28:22.497
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:31:29.733
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:31:29.733
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:31:29.748
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:31:29.764
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:34:25.044
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:34:25.046
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:34:25.056
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:34:25.057
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:43:17.205
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:43:17.206
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:43:17.218
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:43:17.219
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:44:28.232
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:44:28.233
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:44:28.240
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:44:28.241
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:47:33.474
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:47:33.475
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:47:33.486
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-17 09:47:33.487
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:12:11.659
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:12:11.659
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:12:11.667
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:12:11.668
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:17:38.477
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:17:38.477
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:17:38.490
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:17:38.491
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:20:21.946
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:20:21.946
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:20:21.960
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:20:21.960
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:24:24.830
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:24:25.067
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:24:25.101
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:24:25.101
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:26:13.933
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:26:13.933
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:26:13.946
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:26:13.950
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:31:11.040
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:31:11.040
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:31:11.056
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:31:11.056
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:36:28.072
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:36:28.078
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:36:28.086
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:36:28.086
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:41:55.358
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:41:55.371
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:41:55.373
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:41:55.373
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:44:02.557
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:44:02.562
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:44:02.567
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:44:02.567
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:45:19.754
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:45:19.756
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:45:19.768
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:45:19.769
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-02-21 08:50:15.011
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 5.86 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-02-21 08:50:18.957
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 3.85 sec: 10,643 declarations; 91,707 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:50:50.635
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:50:50.642
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:50:50.642
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:50:50.659
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:54:15.200
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:54:15.203
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:54:15.211
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 08:54:15.211
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-02-21 09:03:14.599
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 4.31 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-02-21 09:03:19.051
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 4.29 sec: 10,643 declarations; 91,707 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:07:23.729
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:07:23.730
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:07:23.759
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:07:23.760
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-02-21 09:12:06.000
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 3.54 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-02-21 09:12:09.906
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 3.81 sec: 10,643 declarations; 91,707 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:12:20.637
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:12:20.638
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:12:20.639
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:12:20.639
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:13:12.026
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:13:12.026
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:13:12.031
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:13:12.033
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:14:35.220
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:14:35.220
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:14:35.234
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:14:35.235
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:15:50.960
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:15:50.961
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:15:50.962
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:15:50.966
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:17:02.397
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:17:02.404
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:17:02.413
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-21 09:17:02.415
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+!SESSION 2023-02-22 08:17:42.036 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-02-22 08:18:24.884
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-02-22 08:18:25.009
+!MESSAGE Log4j initialized with config file C:\Users\joepe\STM32CubeIDE\workspace_1.11.0_2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-02-22 08:18:39.391
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:40:44.235
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:40:44.235
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:40:44.281
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:40:44.281
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:42:17.066
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:42:17.066
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:42:17.081
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:42:17.081
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:43:13.363
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:43:13.363
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:43:13.410
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:43:13.410
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2023-02-22 08:43:24.122
+!MESSAGE ST-LINK GDB server failed to start (exit code = 4)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-02-22 08:43:24.256
+!MESSAGE Error in final launch sequence:
+
+Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to start GDB server
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:328)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (4) No device found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1691)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:194)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:95)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:197)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:102)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-02-22 08:43:24.256
+!MESSAGE Failed to start GDB server
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
+Reason: (4) No device found on target.
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1691)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:194)
+	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:95)
+	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:197)
+	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:102)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+!SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2023-02-22 08:43:24.256
+!MESSAGE Error in initializing ST-LINK device.
+Reason: (4) No device found on target.
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:46:24.297
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:46:24.297
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:46:24.308
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:46:24.308
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:49:33.648
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:49:33.648
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:49:33.664
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:49:33.664
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:57:38.128
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:57:38.128
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:57:38.144
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 08:57:38.144
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:00:32.642
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:00:32.642
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:00:32.667
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:00:32.667
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:07:41.044
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:07:41.044
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:07:41.061
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:07:41.061
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:43:33.673
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:43:33.676
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:43:33.688
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:43:33.688
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:47:54.456
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:47:54.457
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:47:54.466
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:47:54.467
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:52:49.837
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:52:49.839
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:52:49.845
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:52:49.845
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:55:27.291
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:55:27.299
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:55:27.308
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:55:27.308
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:56:44.707
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:56:44.709
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:56:44.717
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 09:56:44.718
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:00:51.589
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:00:51.589
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:00:51.598
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:00:51.598
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:01:49.876
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:01:49.876
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:01:49.888
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:01:49.897
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:02:51.259
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:02:51.261
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:02:51.271
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:02:51.271
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:04:45.377
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:04:45.378
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:04:45.398
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:04:45.398
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:06:26.512
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:06:26.514
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:06:26.547
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:06:26.547
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:09:30.745
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:09:30.745
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:09:30.750
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:09:30.750
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:14:21.148
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:14:21.156
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:14:21.180
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:14:21.181
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:17:48.616
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:17:48.620
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:17:48.621
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:17:48.621
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:19:39.897
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:19:39.907
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:19:39.919
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:19:39.919
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:25:02.028
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:25:02.028
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:25:02.043
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:25:02.043
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:26:20.183
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:26:20.203
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:26:20.210
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:26:20.210
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:28:08.335
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:28:08.335
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:28:08.365
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:28:08.366
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:33:18.147
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:33:18.152
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:33:18.153
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-22 10:33:18.158
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+!SESSION 2023-02-23 08:20:02.330 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-02-23 08:20:41.730
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-02-23 08:20:41.894
+!MESSAGE Log4j initialized with config file C:\Users\joepe\STM32CubeIDE\workspace_1.11.0_2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-02-23 08:20:59.687
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-02-23 08:34:52.044
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 9.51 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-02-23 08:34:57.565
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 5.18 sec: 10,645 declarations; 91,735 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 08:38:42.685
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 08:38:42.685
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 08:38:42.717
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 08:38:42.717
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 08:53:39.843
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 08:53:39.843
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 08:53:39.859
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 08:53:39.859
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:03:09.216
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:03:09.216
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:03:09.232
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:03:09.232
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:10:30.851
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:10:30.851
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:10:30.866
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:10:30.882
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:12:47.953
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:12:47.953
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:12:47.969
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:12:47.969
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:14:01.145
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:14:01.145
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:14:01.160
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:14:01.160
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:18:12.954
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:18:12.954
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:18:12.970
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:18:12.970
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:35:17.096
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:35:17.096
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:35:17.112
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:35:17.112
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:41:11.940
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:41:11.940
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:41:11.945
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:41:11.945
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:45:33.020
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:45:33.020
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:45:33.035
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:45:33.035
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:50:47.799
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:50:47.799
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:50:47.815
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 09:50:47.815
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:00:06.685
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:00:06.685
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:00:06.701
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:00:06.701
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:02:40.492
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:02:40.492
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:02:40.507
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:02:40.507
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:06:01.598
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:06:01.598
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:06:01.629
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:06:01.629
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:06:27.783
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:06:27.783
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:06:27.783
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:06:27.799
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:06:46.305
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:06:46.321
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:06:46.321
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:06:46.321
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:08:37.546
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:08:37.546
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:08:37.562
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:08:37.562
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:09:52.167
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:09:52.167
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:09:52.167
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:09:52.182
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:11:08.506
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:11:08.506
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:11:08.521
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:11:08.521
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-02-23 10:11:23.760
+!MESSAGE Error in final launch sequence:
+
+Setup exceptions
+!STACK 1
+org.eclipse.core.runtime.CoreException: Setup exceptions
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:328)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-02-23 10:11:23.760
+!MESSAGE Setup exceptions
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:12:19.318
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:12:19.318
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:12:19.334
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:12:19.334
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:13:27.250
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:13:27.251
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:13:27.260
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:13:27.260
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:15:46.064
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:15:46.064
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:15:46.064
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:15:46.064
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:18:38.264
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:18:38.264
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:18:38.279
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:18:38.279
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:20:48.272
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:20:48.272
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:20:48.272
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-23 10:20:48.272
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+!SESSION 2023-02-28 08:07:31.731 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-02-28 08:08:02.691
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-02-28 08:08:02.817
+!MESSAGE Log4j initialized with config file C:\Users\joepe\STM32CubeIDE\workspace_1.11.0_2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-02-28 08:08:19.354
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-02-28 08:11:46.987
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 12.6 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-02-28 08:11:55.139
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 7.96 sec: 10,646 declarations; 91,730 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:12:12.645
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:12:12.646
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:12:12.670
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:12:12.671
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:21:33.212
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:21:33.213
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:21:33.252
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:21:33.253
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:23:41.343
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:23:41.343
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:23:41.370
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:23:41.370
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:30:35.139
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:30:35.139
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:30:35.147
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:30:35.147
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:33:55.563
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:33:55.563
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:33:55.585
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:33:55.585
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:36:38.808
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:36:38.809
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:36:38.820
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:36:38.820
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:38:43.474
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:38:43.474
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:38:43.490
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:38:43.490
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:39:05.100
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:39:05.101
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:39:05.114
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:39:05.115
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:56:24.081
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:56:24.092
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:56:24.101
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:56:24.102
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:59:38.607
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:59:38.607
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:59:38.638
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-02-28 08:59:38.639
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+!SESSION 2023-03-01 08:21:40.073 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-03-01 08:23:11.204
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-03-01 08:23:11.326
+!MESSAGE Log4j initialized with config file C:\Users\joepe\STM32CubeIDE\workspace_1.11.0_2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-03-01 08:23:32.368
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:24:33.144
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:24:33.145
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:24:33.164
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:24:33.165
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+!SESSION 2023-03-01 08:45:54.478 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-03-01 08:46:43.478
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-03-01 08:47:25.759
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-03-01 08:47:27.582
+!MESSAGE Log4j initialized with config file C:\Users\joepe\STM32CubeIDE\workspace_1.11.0_2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-03-01 08:48:33.169
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:50:46.260
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:50:46.260
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:50:46.276
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:50:46.276
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:55:09.991
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:55:09.991
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:55:10.014
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:55:10.014
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:57:19.980
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:57:19.982
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:57:20.014
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:57:20.014
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:58:42.479
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:58:42.479
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:58:42.511
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 08:58:42.512
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:01:30.349
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:01:30.364
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:01:30.381
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:01:30.381
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:05:45.222
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:05:45.223
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:05:45.233
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:05:45.235
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:08:31.455
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:08:31.466
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:08:31.475
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:08:31.475
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:10:04.411
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:10:04.411
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:10:04.411
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:10:04.411
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:11:21.772
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:11:21.772
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:11:21.795
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:11:21.795
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:12:22.004
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:12:22.004
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:12:22.021
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:12:22.021
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:14:12.866
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:14:12.866
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:14:12.870
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:14:12.870
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:15:47.668
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:15:47.668
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:15:47.684
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:15:47.696
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:17:24.232
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:17:24.233
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:17:24.234
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:17:24.234
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:18:34.938
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:18:34.949
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:18:34.968
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:18:34.968
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:20:35.149
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:20:35.149
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:20:35.180
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:20:35.180
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:34:29.098
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:34:29.098
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:34:29.106
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:34:29.106
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:41:13.101
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:41:13.101
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:41:13.117
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:41:13.117
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:42:33.751
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:42:33.760
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:42:33.761
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:42:33.770
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-01 09:52:54.331
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 8.76 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-01 09:53:00.356
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 5.95 sec: 10,645 declarations; 91,715 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:53:00.821
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:53:00.821
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:53:00.821
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-01 09:53:00.821
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+!SESSION 2023-03-02 08:48:57.971 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-03-02 08:50:04.316
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-03-02 08:50:04.497
+!MESSAGE Log4j initialized with config file C:\Users\joepe\STM32CubeIDE\workspace_1.11.0_2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-03-02 08:50:23.358
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:02:28.657
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:02:28.665
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:02:28.682
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:02:28.682
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:04:58.548
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:04:58.548
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:04:58.586
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:04:58.586
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:10:49.511
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:10:49.511
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:10:49.542
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:10:49.542
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:24:09.507
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:24:09.507
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:24:09.525
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:24:09.525
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:25:45.422
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:25:45.422
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:25:45.432
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:25:45.440
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:46:28.529
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:46:28.531
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:46:28.560
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:46:28.561
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:47:20.655
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:47:20.656
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:47:20.693
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-02 09:47:20.694
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+!SESSION 2023-03-03 08:10:59.083 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-03-03 08:11:44.246
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-03-03 08:11:44.381
+!MESSAGE Log4j initialized with config file C:\Users\joepe\STM32CubeIDE\workspace_1.11.0_2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-03-03 08:12:13.530
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-03 08:19:49.469
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 12.2 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-03 08:19:54.453
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 4.9 sec: 10,646 declarations; 91,722 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-03 08:27:13.404
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-03 08:27:13.404
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-03 08:27:13.427
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-03 08:27:13.427
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+!SESSION 2023-03-06 08:05:36.076 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-03-06 08:15:44.421
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-03-06 08:15:44.566
+!MESSAGE Log4j initialized with config file C:\Users\joepe\STM32CubeIDE\workspace_1.11.0_2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-03-06 08:16:07.429
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:26:48.617
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:26:48.625
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:26:48.647
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:26:48.647
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:31:36.199
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:31:36.199
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:31:36.221
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:31:36.222
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:36:38.140
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:36:38.140
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:36:38.159
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:36:38.159
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:44:58.424
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:44:58.424
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:44:58.455
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:44:58.470
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:47:06.457
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:47:06.485
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:47:06.508
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:47:06.509
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:51:19.103
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:51:19.118
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:51:19.142
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 08:51:19.142
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 09:04:48.138
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 09:04:48.151
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 09:04:48.175
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-06 09:04:48.176
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+!SESSION 2023-03-07 08:11:18.479 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-03-07 08:11:42.801
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-03-07 08:11:42.941
+!MESSAGE Log4j initialized with config file C:\Users\joepe\STM32CubeIDE\workspace_1.11.0_2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-03-07 08:11:57.750
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:12:53.964
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:12:53.964
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:12:53.995
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:12:53.995
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:24:47.966
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:24:47.982
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:24:47.997
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:24:47.997
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:32:39.164
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:32:39.164
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:32:39.258
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:32:39.273
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:33:30.408
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:33:30.408
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:33:30.424
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:33:30.424
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:34:28.427
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:34:28.443
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:34:28.447
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:34:28.447
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:35:45.720
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:35:45.720
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:35:45.736
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:35:45.736
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:36:34.416
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:36:34.416
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:36:34.430
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:36:34.430
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:37:48.932
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:37:48.932
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:37:48.948
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:37:48.948
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:39:34.482
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:39:34.498
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:39:34.498
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:39:34.498
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:42:02.326
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:42:02.326
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:42:02.357
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:42:02.362
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:52:49.230
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:52:49.231
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:52:49.245
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 08:52:49.245
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 09:09:06.904
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 09:09:06.904
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 09:09:06.921
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 09:09:06.921
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 09:24:37.368
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 09:24:37.370
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 09:24:37.379
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-07 09:24:37.380
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+!SESSION 2023-03-08 08:08:30.406 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-03-08 08:09:09.742
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-03-08 08:09:09.866
+!MESSAGE Log4j initialized with config file C:\Users\joepe\STM32CubeIDE\workspace_1.11.0_2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-03-08 08:09:25.194
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:18:29.966
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:18:29.966
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:18:30.001
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:18:30.001
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 08:34:37.707
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 12.6 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 08:34:44.715
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 6.91 sec: 10,646 declarations; 91,780 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:35:10.942
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:35:10.954
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:35:10.965
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:35:10.965
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 08:37:16.739
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 5.06 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 08:37:21.552
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 4.75 sec: 10,646 declarations; 91,780 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:37:46.868
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:37:46.868
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:37:46.880
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:37:46.880
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 08:42:17.993
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 4.09 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 08:42:21.978
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 3.94 sec: 10,646 declarations; 91,780 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:43:06.809
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:43:06.811
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:43:06.822
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:43:06.823
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 08:44:46.194
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 7.3 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 08:44:50.573
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 4.29 sec: 10,646 declarations; 91,780 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:44:58.458
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:44:58.471
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:44:58.472
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:44:58.472
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 08:48:22.620
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 5.54 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 08:48:27.167
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 4.48 sec: 10,646 declarations; 91,780 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:48:38.745
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:48:38.749
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:48:38.749
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:48:38.749
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 08:52:15.013
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 3.79 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 08:52:19.723
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 4.65 sec: 10,646 declarations; 91,780 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:52:52.150
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:52:52.163
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:52:52.210
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 08:52:52.210
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 09:08:07.189
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 2.97 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 09:08:10.203
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 2.97 sec: 10,646 declarations; 91,780 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:08:44.340
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:08:44.340
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:08:44.355
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:08:44.355
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 09:14:55.654
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 2.79 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 09:14:59.352
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 3.62 sec: 10,646 declarations; 91,780 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:15:13.902
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:15:13.902
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:15:13.918
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:15:13.918
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-03-08 09:15:29.664
+!MESSAGE Error in final launch sequence:
+
+Setup exceptions
+!STACK 1
+org.eclipse.core.runtime.CoreException: Setup exceptions
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:328)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-03-08 09:15:29.664
+!MESSAGE Setup exceptions
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:15:39.166
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:15:39.166
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:15:39.166
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:15:39.166
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 09:19:40.428
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 4.07 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 09:19:43.895
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 3.42 sec: 10,646 declarations; 91,780 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:19:58.561
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:19:58.569
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:19:58.579
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:19:58.580
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:23:59.861
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:23:59.861
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:23:59.876
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:23:59.876
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:35:06.931
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:35:06.932
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:35:06.935
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:35:06.935
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:39:16.734
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:39:16.735
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:39:16.736
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:39:16.736
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 09:41:20.403
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 4.42 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-08 09:41:25.872
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 5.39 sec: 10,646 declarations; 91,768 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:41:59.966
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:41:59.966
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:42:00.013
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:42:00.013
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:46:22.181
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:46:22.181
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:46:22.181
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:46:22.181
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:48:45.209
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:48:45.224
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:48:45.224
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-08 09:48:45.224
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.core.jobs 4 2 2023-03-08 09:51:03.851
+!MESSAGE An internal error occurred during: "Execute Debug Command".
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: assertion failed: The application has not been initialized.
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:113)
+	at org.eclipse.core.internal.runtime.InternalPlatform.assertInitialized(InternalPlatform.java:139)
+	at org.eclipse.core.internal.runtime.InternalPlatform.getAdapterManager(InternalPlatform.java:160)
+	at org.eclipse.core.runtime.Platform.getAdapterManager(Platform.java:649)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.getAdapter(GdbLaunch.java:454)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.disconnect(GdbLaunch.java:338)
+	at org.eclipse.debug.internal.core.commands.DisconnectCommand.execute(DisconnectCommand.java:35)
+	at org.eclipse.debug.internal.core.commands.ForEachCommand.doExecute(ForEachCommand.java:36)
+	at org.eclipse.debug.core.commands.AbstractDebugCommand$1.run(AbstractDebugCommand.java:215)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-03-08 09:51:04.211
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
+!SESSION 2023-03-09 08:05:15.711 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-03-09 08:06:30.142
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-03-09 08:06:30.346
+!MESSAGE Log4j initialized with config file C:\Users\joepe\STM32CubeIDE\workspace_1.11.0_2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-03-09 08:07:11.890
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:10:04.823
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:10:04.824
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:10:04.861
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:10:04.868
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-09 08:19:04.711
+!MESSAGE Indexed 'JAN_24_CM4' (24 sources, 85 headers) in 10.6 sec: 7,743 declarations; 55,787 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0031%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:19:08.013
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:19:08.013
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:19:08.020
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:19:08.020
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-09 08:19:10.962
+!MESSAGE Indexed 'JAN_24_CM7' (28 sources, 96 headers) in 6.17 sec: 10,646 declarations; 91,789 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:24:54.627
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:24:54.631
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:24:54.748
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:24:54.748
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:34:22.772
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:34:22.772
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:34:22.788
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:34:22.791
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:39:31.383
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:39:31.384
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:39:31.393
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:39:31.394
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:42:20.086
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:42:20.087
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:42:20.096
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:42:20.097
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-03-09 08:42:39.842
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+target remote localhost:61234
+
+Error message from debugger back end:
+localhost:61234: Connection timed out.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+target remote localhost:61234
+
+Error message from debugger back end:
+localhost:61234: Connection timed out.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:328)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: localhost:61234: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2023-03-09 08:42:39.852
+!MESSAGE Failed to execute MI command:
+target remote localhost:61234
+
+Error message from debugger back end:
+localhost:61234: Connection timed out.
+!STACK 0
+java.lang.Exception: localhost:61234: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:46:34.911
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:46:34.911
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:46:34.911
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:46:34.911
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:48:47.239
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:48:47.254
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:48:47.301
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 08:48:47.301
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 09:00:55.975
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 09:00:55.980
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 09:00:55.989
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 09:00:56.005
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 09:02:25.891
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 09:02:25.891
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 09:02:25.908
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 09:02:25.911
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 09:40:50.520
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 09:40:50.520
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 09:40:50.538
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 09:40:50.539
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 09:43:37.827
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 09:43:37.831
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 09:43:37.855
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 09:43:37.856
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)

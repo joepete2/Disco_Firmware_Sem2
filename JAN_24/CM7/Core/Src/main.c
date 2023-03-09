@@ -24,6 +24,8 @@
 #include "stdio.h"
 #include "stdbool.h"
 #include "pthread.h"
+#include <stdio.h>
+#include <stdlib.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -80,10 +82,15 @@ UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
 bool optReady = false;
+uint16_t spi_read_buf;
+uint16_t spi_destroy_buf;
 int counter = 0;
+int collected = 0;
+int needed = 130;
+int counterPrevious = 0;
 int fastCounter = 0;
 int specResetCounter = 0;
-enum states{collect,wait}state;
+enum states{collect,wait,test}state;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -169,7 +176,6 @@ int main(void)
   /* USER CODE BEGIN 1 */
 //	Data data = Data data_default; //Matthew's code
 //	State state = { read, &data };
-
 	char uart_buf[50];
 	char spi_buf[50];
 	int uart_buf_len;
@@ -239,11 +245,13 @@ __HAL_RCC_HSEM_CLK_ENABLE();
   MX_TIM16_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT(&htim2);
-  HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1);
+  HAL_TIM_Base_Start_IT(&htim16);
+  //HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_2);
 
-  TIM1->CCR1 = (htim1.Init.Period *1);
+
+  //TIM1->CCR1 = (htim1.Init.Period *1);
   TIM4->CCR1 = 5;//(htim4.Init.Period / 2);
   TIM4->CCR2 = 5;
   TIM16->CCR1 = 5;//(htim16.Init.Period *1);
@@ -251,11 +259,27 @@ __HAL_RCC_HSEM_CLK_ENABLE();
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  const uint16_t writeBuf1 = 0b0000110010001111;
-  const uint16_t writeBuf2 = 0b0000110011110000;
-  const uint16_t writeBuf3 = 0b0000110011110000;
-  const uint16_t writeBuf4 = 0b0000110011110000;
-  const uint16_t writeBuf5 = 0b0000110011110000;
+  const uint16_t writeBuf1 = 0b0000100010000000;
+  const uint16_t writeBuf2 = 0b0000010010000000;
+  const uint16_t writeBuf3 = 0b0000110010000000;
+  const uint16_t writeBuf4 = 0b0000001010000000;
+  const uint16_t writeBuf5 = 0b0000101010000000;
+  const uint16_t writeBuf6 = 0b0000011010000000;
+  uint16_t ADCData[needed];
+
+  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_4,GPIO_PIN_RESET);
+  //hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_32;
+  HAL_SPI_Transmit(&hspi2,(uint16_t *)&writeBuf1,1,100);
+  HAL_SPI_Transmit(&hspi2,(uint16_t *)&writeBuf2,1,100);
+  HAL_SPI_Transmit(&hspi2,(uint16_t *)&writeBuf3,1,100);
+  HAL_SPI_Transmit(&hspi2,(uint16_t *)&writeBuf4,1,100);
+  HAL_SPI_Transmit(&hspi2,(uint16_t *)&writeBuf5,1,100);
+  HAL_SPI_Transmit(&hspi2,(uint16_t *)&writeBuf6,1,100);
+  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_4,GPIO_PIN_SET);
+  //hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_16;
+  //hspi2.Init.NSSPMode = SPI_NSS_PULSE_DISABLE;
+
+  //char spi_read_buf[20];
 
   state = collect;
   while (1)
@@ -265,26 +289,87 @@ __HAL_RCC_HSEM_CLK_ENABLE();
 	  		    if (counter == 200) // reset after one data collection cycle
 				{
 					counter = 0;
+					counterPrevious = 0;
+					//HAL_GPIO_TogglePin(GPIOI,GPIO_PIN_13);
+					//HAL_SPI_Transmit(&hspi2,(uint16_t *)&writeBuf,1,100);
+					state = wait;
 				}
-				if (counter == 0) // set spec reset pin high to tell h-chip to send data
+	  		    else if (counter == 0) // set spec reset pin high to tell h-chip to send data
 				{
 					HAL_GPIO_WritePin(GPIOD, SPEC_RST_Pin,GPIO_PIN_SET);
+					HAL_GPIO_WritePin(GPIOB, VNA_TRIG_Pin,GPIO_PIN_SET);
 				}
-				else if (counter == 10) // set spec reset back low
+	  		    else if (counter == 10) // set spec reset back low
 				{
 					HAL_GPIO_WritePin(GPIOD, SPEC_RST_Pin,GPIO_PIN_RESET);
+
+					optReady = true;
 				}
-				else if (optReady) // wait for AD_SP from the h-chip then turn on fast timer to drive adc
+				else if (optReady && (counter > counterPrevious) && (collected < needed) && (counter > 14)) // wait for AD_SP from the h-chip then uses spi2 to read from adc
 				{
-					HAL_TIM_Base_Start_IT(&htim16);
-					HAL_TIMEx_PWMN_Start(&htim16,TIM_CHANNEL_1);
-				}
-				else if (counter > 40 && fastCounter % 4 == 0)
-				{
+					//HAL_TIM_Base_Start_IT(&htim16);
+					//HAL_TIMEx_PWMN_Start(&htim16,TIM_CHANNEL_1);
+					//HAL_SPI_Receive(&hspi2, &spi_read_buf, 1, 100);
+					//HAL_SPI_Receive(&hspi2, &spi_read_buf, 1, 100);
+					/*for(int i = 0; i < 12; i++)
+					{
+						HAL_GPIO_TogglePin(GPIOI,GPIO_PIN_13);
+					}*/
+					HAL_GPIO_WritePin(GPIOA,ADC_CS_Pin,GPIO_PIN_SET);
+				    HAL_SPI_Receive(&hspi2, &spi_destroy_buf, 1, 100);
+				    HAL_GPIO_WritePin(GPIOA,ADC_CS_Pin,GPIO_PIN_RESET);
+				    //memset(spi_read_buf, 0, sizeof(spi_read_buf));
+				    HAL_SPI_Receive(&hspi2, &spi_read_buf, 1, 100);
+				    //HAL_GPIO_TogglePin(GPIOI,GPIO_PIN_13);
+				    counterPrevious = counter;
+				    ADCData[collected] = spi_destroy_buf;
+				    collected++;
+				    //optReady = false;
 
 				}
+				else if (collected == needed)
+				{
+					uart_buf_len = sprintf(uart_buf, "%d", ADCData[40]);
+					HAL_UART_Transmit(&huart3,(uint8_t *)uart_buf,uart_buf_len,100);
+					uart_buf_len = sprintf(uart_buf, "\n");
+					HAL_UART_Transmit(&huart3,(uint8_t *)uart_buf,uart_buf_len,100);
+					collected = 0;
+					optReady = false;
+					//this is where we save the data;
+				}
+	  		    if (counter == 20)
+	  		    {
+	  		    	HAL_GPIO_WritePin(GPIOB,VNA_TRIG_Pin,GPIO_PIN_RESET);
+	  		    }
 				break;
 	  	  case wait:
+
+	  		  	break;
+
+	  	  case test:
+	  		  HAL_TIM_Base_Stop_IT(&htim2);
+	  		  HAL_TIM_Base_Stop_IT(&htim16);
+
+
+	  		  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_4,GPIO_PIN_RESET);
+	  		  hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_32;
+	  		  HAL_SPI_Transmit(&hspi2,(uint16_t *)&writeBuf1,1,100);
+	  		  HAL_SPI_Transmit(&hspi2,(uint16_t *)&writeBuf2,1,100);
+	  		  HAL_SPI_Transmit(&hspi2,(uint16_t *)&writeBuf3,1,100);
+	  		  HAL_SPI_Transmit(&hspi2,(uint16_t *)&writeBuf4,1,100);
+	  		  HAL_SPI_Transmit(&hspi2,(uint16_t *)&writeBuf5,1,100);
+	  		  HAL_SPI_Transmit(&hspi2,(uint16_t *)&writeBuf6,1,100);
+	  		  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_4,GPIO_PIN_SET);
+	  		  hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_16;
+	  		  //hspi2.Init.NSSPMode = SPI_NSS_PULSE_DISABLE;
+
+	  		  HAL_GPIO_TogglePin(GPIOA,ADC_CS_Pin);
+	  		  HAL_SPI_Receive(&hspi2, (uint16_t *)spi_read_buf, 1, 100);
+	  		  HAL_GPIO_TogglePin(GPIOA,ADC_CS_Pin);
+	  		  HAL_SPI_Receive(&hspi2, (uint16_t *)spi_read_buf, 1, 100);
+	  		  HAL_GPIO_TogglePin(GPIOI,GPIO_PIN_13);
+	  		  HAL_Delay(50);
+
 	  		  break;
 
 	  }
@@ -391,10 +476,10 @@ static void MX_SPI2_Init(void)
   hspi2.Init.Mode = SPI_MODE_MASTER;
   hspi2.Init.Direction = SPI_DIRECTION_2LINES;
   hspi2.Init.DataSize = SPI_DATASIZE_16BIT;
-  hspi2.Init.CLKPolarity = SPI_POLARITY_LOW;
+  hspi2.Init.CLKPolarity = SPI_POLARITY_HIGH;
   hspi2.Init.CLKPhase = SPI_PHASE_1EDGE;
-  hspi2.Init.NSS = SPI_NSS_HARD_OUTPUT;
-  hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_32;
+  hspi2.Init.NSS = SPI_NSS_SOFT;
+  hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_16;
   hspi2.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi2.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi2.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -580,7 +665,7 @@ static void MX_TIM4_Init(void)
   }
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
   sConfigOC.Pulse = 0;
-  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_LOW;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   if (HAL_TIM_PWM_ConfigChannel(&htim4, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
   {
@@ -609,9 +694,9 @@ static void MX_TIM16_Init(void)
 
   /* USER CODE END TIM16_Init 1 */
   htim16.Instance = TIM16;
-  htim16.Init.Prescaler = 4-1;
+  htim16.Init.Prescaler = 2000-1;
   htim16.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim16.Init.Period = 10-1;
+  htim16.Init.Period = 2000-1;
   htim16.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim16.Init.RepetitionCounter = 0;
   htim16.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
@@ -683,23 +768,22 @@ static void MX_GPIO_Init(void)
   GPIO_InitTypeDef GPIO_InitStruct = {0};
 
   /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOI_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
-  __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOE_CLK_ENABLE();
-  __HAL_RCC_GPIOG_CLK_ENABLE();
   __HAL_RCC_GPIOK_CLK_ENABLE();
   __HAL_RCC_GPIOF_CLK_ENABLE();
   __HAL_RCC_GPIOJ_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOH, GPIO_PIN_15, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4|VNA_TRIG_Pin|LCD_RST_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, VNA_TRIG_Pin|LCD_RST_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOH, GPIO_PIN_15, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOI, GPIO_PIN_13, GPIO_PIN_RESET);
@@ -708,10 +792,23 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(ADC_CS_GPIO_Port, ADC_CS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(SPEC_RST_GPIO_Port, SPEC_RST_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(SPEC_RST_GPIO_Port, SPEC_RST_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LD1_GPIO_Port, LD1_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : PB6 */
+  GPIO_InitStruct.Pin = GPIO_PIN_6;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PB4 VNA_TRIG_Pin LCD_RST_Pin */
+  GPIO_InitStruct.Pin = GPIO_PIN_4|VNA_TRIG_Pin|LCD_RST_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PH15 */
   GPIO_InitStruct.Pin = GPIO_PIN_15;
@@ -719,13 +816,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOH, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : VNA_TRIG_Pin LCD_RST_Pin */
-  GPIO_InitStruct.Pin = VNA_TRIG_Pin|LCD_RST_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pin : LCD_DISP_Pin */
   GPIO_InitStruct.Pin = LCD_DISP_Pin;
@@ -764,12 +854,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOI, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PG3 */
-  GPIO_InitStruct.Pin = GPIO_PIN_3;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
-
   /*Configure GPIO pin : LCD_BL_Pin */
   GPIO_InitStruct.Pin = LCD_BL_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
@@ -798,7 +882,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin : SPEC_RST_Pin */
   GPIO_InitStruct.Pin = SPEC_RST_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(SPEC_RST_GPIO_Port, &GPIO_InitStruct);
 
@@ -826,12 +910,12 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 	if (GPIO_Pin == GPIO_PIN_6)
 	{
-
-		optReady = true;
+		//optReady = true;
 	}
 	else if (GPIO_Pin == GPIO_PIN_8)
 	{
-		HAL_GPIO_TogglePin(GPIOI,GPIO_PIN_13);
+		//HAL_GPIO_TogglePin(GPIOI,GPIO_PIN_13);
+		//optReady = true;
 	}
 }
 
@@ -840,18 +924,20 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 
 	if (htim == &htim2)
 	{
+//		HAL_GPIO_TogglePin(GPIOA,ADC_CS_Pin);
+//		HAL_SPI_Receive(&hspi2, (uint16_t *)spi_read_buf, 1, 100);
+//		HAL_GPIO_TogglePin(GPIOA,ADC_CS_Pin);
+//		HAL_SPI_Receive(&hspi2, (uint16_t *)spi_read_buf, 1, 100);
+		//HAL_GPIO_TogglePin(GPIOI,GPIO_PIN_13);
+		//counterPrevious = counter;
 		counter++;
+		//HAL_GPIO_TogglePin(GPIOI,GPIO_PIN_13);
 	}
 	else if (htim == &htim16)
 	{
-		HAL_GPIO_TogglePin(GPIOI,GPIO_PIN_13);
-		fastCounter++;
-	}
-	if (fastCounter == 2)
-	{
-		//HAL_TIMEx_PWMN_Stop(&htim16,TIM_CHANNEL_1);
-		HAL_TIM_Base_Stop_IT(&htim16);
-		fastCounter = 0;
+		state = collect;
+		counter = 0;
+		//HAL_GPIO_TogglePin(GPIOI,GPIO_PIN_13);
 	}
 }
 /* USER CODE END 4 */

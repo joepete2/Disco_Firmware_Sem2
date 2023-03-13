@@ -11414,3 +11414,96 @@ java.lang.Exception: localhost:61234: Connection timed out.
 
 !ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-09 09:43:37.856
 !MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+!SESSION 2023-03-10 08:04:26.075 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-03-10 08:05:09.890
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-03-10 08:05:10.095
+!MESSAGE Log4j initialized with config file C:\Users\joepe\STM32CubeIDE\workspace_1.11.0_2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-03-10 08:05:27.802
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-10 08:29:54.543
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-10 08:29:54.556
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-10 08:29:54.572
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-10 08:29:54.572
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+!SESSION 2023-03-10 09:44:58.222 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-03-10 09:45:13.213
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-03-10 09:45:13.336
+!MESSAGE Log4j initialized with config file C:\Users\joepe\STM32CubeIDE\workspace_1.11.0_2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-03-10 09:45:24.823
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-10 09:47:05.740
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-10 09:47:05.740
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-10 09:47:05.772
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-10 09:47:05.772
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-10 09:48:00.716
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-10 09:48:00.716
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-10 09:48:00.723
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-10 09:48:00.723
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-10 09:51:12.187
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-10 09:51:12.187
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_ltdc_ex.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-10 09:51:12.201
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.c from Makefile generation (invalid resource)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none.oss 2 2 2023-03-10 09:51:12.201
+!MESSAGE Ignored L/JAN_24_CM4/Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.c from Makefile generation (invalid resource)
+!SESSION 2023-03-13 08:12:02.605 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-03-13 08:12:29.256
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-03-13 08:12:29.396
+!MESSAGE Log4j initialized with config file C:\Users\joepe\STM32CubeIDE\workspace_1.11.0_2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-03-13 08:12:43.134
+!MESSAGE Started RMI Server, listening on port 41337

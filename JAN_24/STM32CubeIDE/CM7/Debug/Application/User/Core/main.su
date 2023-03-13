@@ -1,4 +1,4 @@
-C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/main.c:174:5:main	168	dynamic,ignoring_inline_asm
+C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/main.c:174:5:main	176	dynamic,ignoring_inline_asm
 C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/main.c:405:6:SystemClock_Config	120	static
 C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/main.c:464:13:MX_SPI2_Init	8	static
 C:/Users/joepe/STM32CubeIDE/workspace_1.11.0_2/JAN_24/CM7/Core/Src/main.c:512:13:MX_TIM1_Init	112	static

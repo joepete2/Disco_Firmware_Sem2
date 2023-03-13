@@ -311,10 +311,10 @@ __HAL_RCC_HSEM_CLK_ENABLE();
 					//HAL_TIMEx_PWMN_Start(&htim16,TIM_CHANNEL_1);
 					//HAL_SPI_Receive(&hspi2, &spi_read_buf, 1, 100);
 					//HAL_SPI_Receive(&hspi2, &spi_read_buf, 1, 100);
-					/*for(int i = 0; i < 12; i++)
+					for(int i = 0; i < 12; i++)
 					{
 						HAL_GPIO_TogglePin(GPIOI,GPIO_PIN_13);
-					}*/
+					}
 					HAL_GPIO_WritePin(GPIOA,ADC_CS_Pin,GPIO_PIN_SET);
 				    HAL_SPI_Receive(&hspi2, &spi_destroy_buf, 1, 100);
 				    HAL_GPIO_WritePin(GPIOA,ADC_CS_Pin,GPIO_PIN_RESET);
@@ -322,7 +322,7 @@ __HAL_RCC_HSEM_CLK_ENABLE();
 				    HAL_SPI_Receive(&hspi2, &spi_read_buf, 1, 100);
 				    //HAL_GPIO_TogglePin(GPIOI,GPIO_PIN_13);
 				    counterPrevious = counter;
-				    ADCData[collected] = spi_destroy_buf;
+				    ADCData[collected] = spi_read_buf;
 				    collected++;
 				    //optReady = false;
 

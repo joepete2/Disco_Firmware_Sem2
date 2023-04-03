@@ -6,6 +6,8 @@
 "./Application/User/Startup/startup_stm32h745xihx.o"
 "./Drivers/CMSIS/system_stm32h7xx_dualcore_boot_cm4_cm7.o"
 "./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal.o"
+"./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_adc.o"
+"./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_adc_ex.o"
 "./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_cortex.o"
 "./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_dma.o"
 "./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_dma_ex.o"

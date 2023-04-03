@@ -77,10 +77,6 @@ void Error_Handler(void);
 #define OSC_IN_GPIO_Port GPIOH
 #define LCD_BL_Pin GPIO_PIN_0
 #define LCD_BL_GPIO_Port GPIOK
-#define VSENSE2_Pin GPIO_PIN_8
-#define VSENSE2_GPIO_Port GPIOF
-#define VSENSE1_Pin GPIO_PIN_0
-#define VSENSE1_GPIO_Port GPIOC
 #define VCP_TX_Pin GPIO_PIN_10
 #define VCP_TX_GPIO_Port GPIOB
 #define VCP_RX_Pin GPIO_PIN_11
@@ -89,10 +85,6 @@ void Error_Handler(void);
 #define ADC_CS_GPIO_Port GPIOA
 #define SPEC_RST_Pin GPIO_PIN_13
 #define SPEC_RST_GPIO_Port GPIOD
-#define VSENSE3_Pin GPIO_PIN_0
-#define VSENSE3_GPIO_Port GPIOA
-#define VSENSE4_Pin GPIO_PIN_1
-#define VSENSE4_GPIO_Port GPIOA
 #define LD1_Pin GPIO_PIN_2
 #define LD1_GPIO_Port GPIOJ
 #define LCD_RST_Pin GPIO_PIN_12

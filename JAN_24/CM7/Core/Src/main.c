@@ -144,7 +144,7 @@ int main(void)
 /* USER CODE END Boot_Mode_Sequence_0 */
 
   /* Enable I-Cache---------------------------------------------------------*/
-   SCB_EnableICache();
+  SCB_EnableICache();
 
   /* Enable D-Cache---------------------------------------------------------*/
   SCB_EnableDCache();
@@ -220,15 +220,16 @@ __HAL_RCC_HSEM_CLK_ENABLE();
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  uint16_t writeBuf1 = 0b0000100000000000; // LED
-  uint16_t writeBuf2 = 0b0000010000000000; // LED
-  uint16_t writeBuf3 = 0b0000110000000000; // LED
-  uint16_t writeBuf4 = 0b0000001000000000; // LED
-  uint16_t writeBuf5 = 0b0000101000000000; // LED
-  uint16_t writeBuf6 = 0b0000011000000000; // LED
+  uint16_t writeBuf1 = 0b0000100001100100; // LED
+  uint16_t writeBuf2 = 0b0000010001100100; // LED
+  uint16_t writeBuf3 = 0b0000110001100100; // LED
+  uint16_t writeBuf4 = 0b0000001001100100; // LED
+  uint16_t writeBuf5 = 0b0000101001100100; // LED
+  uint16_t writeBuf6 = 0b0000011001100100; // LED
   uint16_t ADCData[needed];
   char uart_buf[1000];
   int uart_buf_len;
+  char num[6];
 
   HAL_GPIO_WritePin(GPIOB,GPIO_PIN_4,GPIO_PIN_RESET);
   slowSPI = true;
@@ -339,22 +340,22 @@ __HAL_RCC_HSEM_CLK_ENABLE();
 	  		  	// Just waits for 50Hz timer to switch state back to collect and checks LEDs once a second
 	  		  	 if (sendData)
 				 {
-					for (int i = 0; i < 130; i++) {
-						char num[6]; // allocate space for a 5-digit number and a null terminator
+					for (int i = 1; i < 129; i++) {
+						//char num[6]; // allocate space for a 5-digit number and a null terminator
 						sprintf(num, "%hu", ADCData[i]); // convert uint16_t to string
 						strcat(uart_buf, num); // concatenate string with current number
-						if (i < 129) { // add a comma after every element except the last one
+						if (i < 128) { // add a comma after every element except the last one
 							strcat(uart_buf, ",");
 						}
-						if (i == 129) { // add a comma after every element except the last one
-							strcat(uart_buf, ",");
-							sprintf(num, "%hu", slowCounter);
-							strcat(uart_buf,num);
+						if (i == 128) { // add a comma after every element except the last one
+//							strcat(uart_buf, ",");
+//							sprintf(num, "%hu", slowCounter);
+//							strcat(uart_buf,num);
 							strcat(uart_buf, "\n");
 						}
 					}
 					uart_buf_len = strlen(uart_buf);//sprintf(uart_buf, "%d", ADCData[127]);
-					HAL_UART_Transmit(&huart3,(uint8_t *)uart_buf,strlen(uart_buf),10);
+					HAL_UART_Transmit(&huart3,(uint8_t *)uart_buf,strlen(uart_buf),50);
 					memset(uart_buf,0,uart_buf_len);
 					sendData = false;
 				 }
@@ -966,7 +967,7 @@ static void MX_TIM16_Init(void)
   htim16.Instance = TIM16;
   htim16.Init.Prescaler = 2000-1;
   htim16.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim16.Init.Period = 2000-1;
+  htim16.Init.Period = 3000-1;
   htim16.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim16.Init.RepetitionCounter = 0;
   htim16.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
@@ -996,7 +997,7 @@ static void MX_USART3_UART_Init(void)
 
   /* USER CODE END USART3_Init 1 */
   huart3.Instance = USART3;
-  huart3.Init.BaudRate = 921600;
+  huart3.Init.BaudRate = 500000;
   huart3.Init.WordLength = UART_WORDLENGTH_8B;
   huart3.Init.StopBits = UART_STOPBITS_1;
   huart3.Init.Parity = UART_PARITY_NONE;

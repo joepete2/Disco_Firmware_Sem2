@@ -1,10 +1,10 @@
-09:36:59 **** Incremental Build of configuration Debug for project JAN_24_CM7 ****
+08:59:11 **** Incremental Build of configuration Debug for project JAN_24_CM7 ****
 make -j4 all 
 arm-none-eabi-size   JAN_24_CM7.elf 
    text	   data	    bss	    dec	    hex	filename
-  56136	    128	   2536	  58800	   e5b0	JAN_24_CM7.elf
+  56080	    128	   2536	  58744	   e578	JAN_24_CM7.elf
 Finished building: default.size.stdout
  
 
-09:37:00 Build Finished. 0 errors, 0 warnings. (took 802ms)
+08:59:11 Build Finished. 0 errors, 0 warnings. (took 597ms)
 
